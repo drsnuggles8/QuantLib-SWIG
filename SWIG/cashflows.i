@@ -365,6 +365,7 @@ using QuantLib::BlackIborCouponPricer;
 using QuantLib::SubPeriodsPricer;
 using QuantLib::CompoundingRatePricer;
 using QuantLib::AveragingRatePricer;
+using QuantLib::OvernightIndexedCouponPricer;
 %}
 
 %shared_ptr(IborCouponPricer)
@@ -408,6 +409,12 @@ class CompoundingRatePricer: public SubPeriodsPricer {
 class AveragingRatePricer: public SubPeriodsPricer {
   public:
     AveragingRatePricer();
+};
+
+%shared_ptr(OvernightIndexedCouponPricer)
+class OvernightIndexedCouponPricer: public FloatingRateCouponPricer {
+  public:
+    OvernightIndexedCouponPricer();
 };
 
 %{
