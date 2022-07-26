@@ -997,6 +997,14 @@ class CashFlows {
         nextCashFlowDate(const Leg& leg,
                          bool includeSettlementDateFlows,
                          Date settlementDate = Date());
+    static Real
+        previousCashFlowAmount(const Leg& leg,
+                               bool includeSettlementDateFlows,
+                               Date settlementDate = Date());
+    static Real
+        nextCashFlowAmount(const Leg& leg,
+                           bool includeSettlementDateFlows,
+                           Date settlementDate = Date());
 
     %extend {
 
